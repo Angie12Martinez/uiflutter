@@ -58,7 +58,9 @@ class _ContenidoState extends State<Contenido> {
           Stack(
             alignment: AlignmentDirectional.center,
             children: [
-              Container(
+              Flexible(
+                flex:1,
+                child: Container(
                 width: 200,
                 height: 200,
                 decoration: BoxDecoration(
@@ -67,11 +69,14 @@ class _ContenidoState extends State<Contenido> {
                   color: const Color.fromARGB(42, 110, 171, 224),
                 ),
               ),
-              Image.asset(
+              ),
+             Flexible(
+              flex: 1,
+              child:  Image.asset(
                 'lib/src/img/cap.png',
                 width: 235,
                 height: 200,
-              ),
+              ),)
             ],
           ),
           const SizedBox(
@@ -80,14 +85,17 @@ class _ContenidoState extends State<Contenido> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text(
+              Flexible(
+                flex: 1,
+                child: Text(
                 'Welcome to TDG!',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
                 ),
-              ),
+              ), 
+              )
             ],
           ),
           const SizedBox(
@@ -98,7 +106,10 @@ class _ContenidoState extends State<Contenido> {
             alignment: Alignment.center,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20), 
-              child: Text(
+              child: 
+              Flexible(
+                flex: 1,
+                child: Text(
                 'A one-stop portal for you to learn the latest technologies from SCRATCH',
                 style: TextStyle(
                   color: Colors.white,
@@ -106,7 +117,8 @@ class _ContenidoState extends State<Contenido> {
                   fontWeight: FontWeight.w700,
                 ),
                 textAlign: TextAlign.center,
-              ),
+              ), 
+              )
             ),
           ),
 
@@ -143,13 +155,17 @@ class _BotonState extends State<Boton> {
                 const Color.fromARGB(255, 38, 188, 187),
               ),
             ),
-            child: const Text(
+            child: 
+            const Flexible(
+              flex: 1,
+              child: Text(
               'Get Started >',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
               ),
+            ),
             ),
           ),
         ),

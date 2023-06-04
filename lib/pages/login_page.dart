@@ -52,7 +52,8 @@ class _ContenidoState extends State<Contenido> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          Text(
+          Expanded(
+            child: Text(
             'Sign in to TGD and continue',
             style: TextStyle(
               color: Colors.white,
@@ -60,11 +61,12 @@ class _ContenidoState extends State<Contenido> {
               fontWeight: FontWeight.w600,
             ),
             textAlign: TextAlign.center,
-          ),
+          ),),
           SizedBox(
             height: 15,
           ),
-          Text(
+          Expanded(
+            child: Text(
             'Enter your email and password below to continue to The Growing Developer and let the learning begin!',
             style: TextStyle(
               color: Colors.white,
@@ -73,7 +75,7 @@ class _ContenidoState extends State<Contenido> {
               letterSpacing: 1.5,
             ),
             textAlign: TextAlign.center, 
-          ),
+          ),),
           SizedBox(
             height: 20,
           ),
@@ -105,7 +107,8 @@ class _DatosState extends State<Datos> {
       ),
       child: Column(
         children: [
-          TextFormField(
+          Expanded(
+            child: TextFormField(
             obscureText: obb,
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
@@ -122,10 +125,12 @@ class _DatosState extends State<Datos> {
               ),
             ),
           ),
+          ),
           const SizedBox(
             height: 15,
           ),
-          TextFormField(
+          Expanded(
+            child: TextFormField(
             obscureText: obs,
             decoration: InputDecoration(
               border: const OutlineInputBorder(),
@@ -150,7 +155,7 @@ class _DatosState extends State<Datos> {
                 },
               ),
             ),
-          ),
+          ),),
           const SizedBox(
             height: 20,
           ),
@@ -176,7 +181,8 @@ class _BotonesState extends State<Botones> {
         const SizedBox(
           height: 5,
         ),
-        SizedBox(
+        Expanded(
+          child: SizedBox(
           width: double.infinity,
           height: 50,
           child: ElevatedButton(
@@ -194,12 +200,13 @@ class _BotonesState extends State<Botones> {
               ),
             ),
           ),
-        ),
+        ), ),
         const SizedBox(
           height: 25,
           width: double.infinity,
         ),
-        SizedBox(
+        Expanded(
+          child: SizedBox(
           width: double.infinity,
           height: 50,
           child: OutlinedButton(
@@ -229,11 +236,12 @@ class _BotonesState extends State<Botones> {
               ],
             ),
           ),
-        ),
+        ), ),
         const SizedBox(
           height: 50,
         ),
-        const Align(
+       const Expanded(
+        child:  Align(
           alignment: Alignment.center,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20), 
@@ -247,7 +255,7 @@ class _BotonesState extends State<Botones> {
               textAlign: TextAlign.center,
             ),
           ),
-        ),
+        ), ),
       ],
     );
   }
